@@ -272,18 +272,20 @@ namespace Control_Pines_Arduino
             }
             if (datos[index] == 65 && datos[index + 1] == 67 && datos[index + 2] == 69)
             {     //Cuando el se encuentra con la lectura del byte correcto verifica uno a uno el estado de los bits 
-                if (datos[index + 4] == 0b11111111)
-                {
-                    lbconfirmacion.BackColor = Color.Gray;
-                    lbconfirmacion.Text = "Correcto";
+                  //if (datos[index + 4] == 0b11111111)
+                  //{
+                  //    lbconfirmacion.BackColor = Color.Gray;
+                  //    lbconfirmacion.Text = "Correcto";
 
-                }
+                //}
 
-                if (datos[index + 4] == 0b00000000)
-                {
-                    lbconfirmacion.BackColor = Color.Red;
-                    lbconfirmacion.Text = "Incorrecto";
-                }
+                //if (datos[index + 4] == 0b00000000)
+                //{
+                //    lbconfirmacion.BackColor = Color.Red;
+                //    lbconfirmacion.Text = "Incorrecto";
+                //}
+
+                lbconfirmacion.Text = Convert.ToString(datos[index + 4]);
 
                 //Bit LSB Entrada 1 
                 if ((datos[index + 3] & 0b00000001) == 0b00000001)
@@ -449,7 +451,11 @@ namespace Control_Pines_Arduino
         {
             switch (cbNodos.SelectedItem.ToString().Trim())
             {
-               
+
+                case "Broadcast":
+                    envio_coordinador = 0;
+                    break;
+
                 case "Nodo 0":
                     envio_coordinador = 10;
                     break;

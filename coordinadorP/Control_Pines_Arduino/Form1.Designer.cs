@@ -152,7 +152,6 @@
             this.label29.Size = new System.Drawing.Size(84, 16);
             this.label29.TabIndex = 153;
             this.label29.Text = "Entrada 15";
-            this.label29.Visible = false;
             // 
             // label30
             // 
@@ -164,7 +163,6 @@
             this.label30.Size = new System.Drawing.Size(85, 16);
             this.label30.TabIndex = 152;
             this.label30.Text = "Entrada 14";
-            this.label30.Visible = false;
             // 
             // label35
             // 
@@ -176,7 +174,6 @@
             this.label35.Size = new System.Drawing.Size(85, 16);
             this.label35.TabIndex = 156;
             this.label35.Text = "Entrada 18";
-            this.label35.Visible = false;
             // 
             // label36
             // 
@@ -188,7 +185,6 @@
             this.label36.Size = new System.Drawing.Size(85, 16);
             this.label36.TabIndex = 155;
             this.label36.Text = "Entrada 17";
-            this.label36.Visible = false;
             // 
             // label37
             // 
@@ -200,7 +196,6 @@
             this.label37.Size = new System.Drawing.Size(84, 16);
             this.label37.TabIndex = 154;
             this.label37.Text = "Entrada 16";
-            this.label37.Visible = false;
             // 
             // label20
             // 
@@ -212,7 +207,6 @@
             this.label20.Size = new System.Drawing.Size(85, 16);
             this.label20.TabIndex = 159;
             this.label20.Text = "Entrada 21";
-            this.label20.Visible = false;
             // 
             // label38
             // 
@@ -224,7 +218,6 @@
             this.label38.Size = new System.Drawing.Size(85, 16);
             this.label38.TabIndex = 158;
             this.label38.Text = "Entrada 20";
-            this.label38.Visible = false;
             // 
             // label39
             // 
@@ -236,7 +229,6 @@
             this.label39.Size = new System.Drawing.Size(85, 16);
             this.label39.TabIndex = 157;
             this.label39.Text = "Entrada 19";
-            this.label39.Visible = false;
             // 
             // D14in
             // 
@@ -245,7 +237,6 @@
             this.D14in.Size = new System.Drawing.Size(54, 23);
             this.D14in.TabIndex = 267;
             this.D14in.UseVisualStyleBackColor = true;
-            this.D14in.Visible = false;
             // 
             // D14out
             // 
@@ -265,7 +256,6 @@
             this.D15in.Size = new System.Drawing.Size(54, 23);
             this.D15in.TabIndex = 269;
             this.D15in.UseVisualStyleBackColor = true;
-            this.D15in.Visible = false;
             // 
             // D15out
             // 
@@ -285,7 +275,6 @@
             this.D16in.Size = new System.Drawing.Size(54, 23);
             this.D16in.TabIndex = 271;
             this.D16in.UseVisualStyleBackColor = true;
-            this.D16in.Visible = false;
             // 
             // D16out
             // 
@@ -305,7 +294,6 @@
             this.D17in.Size = new System.Drawing.Size(54, 23);
             this.D17in.TabIndex = 273;
             this.D17in.UseVisualStyleBackColor = true;
-            this.D17in.Visible = false;
             // 
             // D17out
             // 
@@ -325,7 +313,6 @@
             this.D18in.Size = new System.Drawing.Size(54, 23);
             this.D18in.TabIndex = 275;
             this.D18in.UseVisualStyleBackColor = true;
-            this.D18in.Visible = false;
             // 
             // D18out
             // 
@@ -345,7 +332,6 @@
             this.D19in.Size = new System.Drawing.Size(54, 23);
             this.D19in.TabIndex = 277;
             this.D19in.UseVisualStyleBackColor = true;
-            this.D19in.Visible = false;
             // 
             // D19out
             // 
@@ -365,7 +351,6 @@
             this.D20in.Size = new System.Drawing.Size(54, 23);
             this.D20in.TabIndex = 279;
             this.D20in.UseVisualStyleBackColor = true;
-            this.D20in.Visible = false;
             // 
             // D20out
             // 
@@ -385,7 +370,6 @@
             this.D21in.Size = new System.Drawing.Size(54, 23);
             this.D21in.TabIndex = 297;
             this.D21in.UseVisualStyleBackColor = true;
-            this.D21in.Visible = false;
             // 
             // D21out
             // 
@@ -522,7 +506,8 @@
             "Nodo 2",
             "Nodo 3",
             "Nodo 4",
-            "Nodo 5"});
+            "Nodo 5",
+            "Broadcast"});
             this.cbNodos.Location = new System.Drawing.Point(529, 209);
             this.cbNodos.Name = "cbNodos";
             this.cbNodos.Size = new System.Drawing.Size(160, 21);
@@ -614,7 +599,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(912, 525);
+            this.ClientSize = new System.Drawing.Size(1032, 546);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.lbconfirmacion);
             this.Controls.Add(this.label13);
@@ -663,7 +648,7 @@
             this.Controls.Add(this.BUSCA_PUERTO);
             this.Name = "FIRMATA";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "s";
+            this.Text = "Coordinador";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FIRMATA_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.suma1)).EndInit();
