@@ -79,6 +79,14 @@ namespace Control_Pines_Arduino
                     ConexionSerial.Handshake = System.IO.Ports.Handshake.None; // Handshake = none
                     ConexionSerial.Open();  //Se abre el puerto
                     Temporizado.Enabled = true; //Se habilita el timer [cada cuánto se hará un envio de paquete] Programado desde el entorno gráfico a 500 ms.
+                    D14out.Enabled = true;
+                    D15out.Enabled = true;
+                    D16out.Enabled = true;
+                    D17out.Enabled = true;
+                    D18out.Enabled = true;
+                    D19out.Enabled = true;
+                    D20out.Enabled = true;
+                    D21out.Enabled = true;
 
                     try
                     {
@@ -103,6 +111,25 @@ namespace Control_Pines_Arduino
                     BUSCA_PUERTO.Enabled = true; //Habilita de nuevo el botón de busqueda de puertos.
                     PUERTO.Text = "Puertos COM"; //Regresa el combobox de puertos a su estado inicial
                     VELOCIDAD.Text = "Vel. Transmisión"; //Regresa el combobox de Velocidad a su estado inicial
+                    D14out.Enabled = false;
+                    D15out.Enabled = false;
+                    D16out.Enabled = false;
+                    D17out.Enabled = false;
+                    D18out.Enabled = false;
+                    D19out.Enabled = false;
+                    D20out.Enabled = false;
+                    D21out.Enabled = false;
+                    
+                    D14out.Text = "HIGH";
+                    D15out.Text = "HIGH";
+                    D16out.Text = "HIGH";
+                    D17out.Text = "HIGH";
+                    D18out.Text = "HIGH";
+                    D19out.Text = "HIGH";
+                    D20out.Text = "HIGH";
+                    D21out.Text = "HIGH";
+                    nivel_salidas2 = 0b00000000;
+
                 }
             }
 
@@ -137,14 +164,17 @@ namespace Control_Pines_Arduino
         {
             if (D14out.Text == "HIGH")
             {
-                
                 nivel_salidas2 = nivel_salidas2 | 0b00000001;
                 D14out.Text = "LOW";
+               
+
+
             }
             else if (D14out.Text == "LOW")
             {
                 nivel_salidas2 = nivel_salidas2 & 0b11111110;
                 D14out.Text = "HIGH";
+                
             }
         }
         //Boton de la Salida 2 bit [0b00000010]
@@ -154,11 +184,14 @@ namespace Control_Pines_Arduino
             {
                 nivel_salidas2 = nivel_salidas2 | 0b00000010;
                 D15out.Text = "LOW";
+                
+
             }
             else if (D15out.Text == "LOW")
             {
                 nivel_salidas2 = nivel_salidas2 & 0b11111101;
                 D15out.Text = "HIGH";
+                
             }
         }
         //Boton de la Salida 3 bit [0b00000100]
@@ -168,11 +201,13 @@ namespace Control_Pines_Arduino
             {
                 nivel_salidas2 = nivel_salidas2 | 0b00000100;
                 D16out.Text = "LOW";
+               
             }
             else if (D16out.Text == "LOW")
             {
                 nivel_salidas2 = nivel_salidas2 & 0b11111011;
                 D16out.Text = "HIGH";
+                
             }
         }
         //Boton de la Salida 4 bit [0b00001000]
@@ -182,11 +217,13 @@ namespace Control_Pines_Arduino
             {
                 nivel_salidas2 = nivel_salidas2 | 0b00001000;
                 D17out.Text = "LOW";
+               
             }
             else if (D17out.Text == "LOW")
             {
                 nivel_salidas2 = nivel_salidas2 & 0b11110111;
                 D17out.Text = "HIGH";
+               
             }
         }
         //Boton de la Salida 5 bit [0b00010000]
@@ -196,11 +233,13 @@ namespace Control_Pines_Arduino
             {
                 nivel_salidas2 = nivel_salidas2 | 0b00010000;
                 D18out.Text = "LOW";
+                
             }
             else if (D18out.Text == "LOW")
             {
                 nivel_salidas2 = nivel_salidas2 & 0b11101111;
                 D18out.Text = "HIGH";
+                
             }
         }
         //Boton de la Salida 6 bit [0b00100000]
@@ -210,11 +249,13 @@ namespace Control_Pines_Arduino
             {
                 nivel_salidas2 = nivel_salidas2 | 0b00100000;
                 D19out.Text = "LOW";
+              
             }
             else if (D19out.Text == "LOW")
             {
                 nivel_salidas2 = nivel_salidas2 & 0b11011111;
                 D19out.Text = "HIGH";
+              
             }
         }
         //Boton de la Salida 7 bit [0b01000000]
@@ -224,11 +265,13 @@ namespace Control_Pines_Arduino
             {
                 nivel_salidas2 = nivel_salidas2 | 0b01000000;
                 D20out.Text = "LOW";
+               
             }
             else if (D20out.Text == "LOW")
             {
                 nivel_salidas2 = nivel_salidas2 & 0b10111111;
                 D20out.Text = "HIGH";
+               
             }
         }
         //Boton de la Salida 8 bit [MSB 0b10000010]
@@ -238,11 +281,13 @@ namespace Control_Pines_Arduino
             {
                 nivel_salidas2 = nivel_salidas2 | 0b10000000;
                 D21out.Text = "LOW";
+               
             }
             else if (D21out.Text == "LOW")
             {
                 nivel_salidas2 = nivel_salidas2 & 0b01111111;
                 D21out.Text = "HIGH";
+               
             }
         }
         /*Fin de seccion--------------------------------------------------------*/
@@ -481,17 +526,14 @@ namespace Control_Pines_Arduino
                     break;
 
                 default:
-
+                    
                     break;
             }
             
             
         }
 
-        private void lbconfirmacion_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
 
 

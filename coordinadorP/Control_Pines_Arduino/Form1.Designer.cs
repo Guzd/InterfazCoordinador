@@ -44,7 +44,6 @@
             this.label38 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.D14in = new System.Windows.Forms.Button();
-            this.D14out = new System.Windows.Forms.Button();
             this.D15in = new System.Windows.Forms.Button();
             this.D15out = new System.Windows.Forms.Button();
             this.D16in = new System.Windows.Forms.Button();
@@ -78,6 +77,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.lbconfirmacion = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.D14out = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.suma1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -237,17 +237,6 @@
             this.D14in.Size = new System.Drawing.Size(54, 23);
             this.D14in.TabIndex = 267;
             this.D14in.UseVisualStyleBackColor = true;
-            // 
-            // D14out
-            // 
-            this.D14out.Font = new System.Drawing.Font("Bookman Old Style", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.D14out.Location = new System.Drawing.Point(407, 199);
-            this.D14out.Name = "D14out";
-            this.D14out.Size = new System.Drawing.Size(75, 23);
-            this.D14out.TabIndex = 266;
-            this.D14out.Text = "HIGH";
-            this.D14out.UseVisualStyleBackColor = true;
-            this.D14out.Click += new System.EventHandler(this.D14out_Click);
             // 
             // D15in
             // 
@@ -580,7 +569,6 @@
             this.lbconfirmacion.TabIndex = 317;
             this.lbconfirmacion.Text = "Confirmacion";
             this.lbconfirmacion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbconfirmacion.Click += new System.EventHandler(this.lbconfirmacion_Click);
             // 
             // richTextBox1
             // 
@@ -593,6 +581,18 @@
             this.richTextBox1.Size = new System.Drawing.Size(579, 91);
             this.richTextBox1.TabIndex = 318;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            // 
+            // D14out
+            // 
+            this.D14out.Enabled = false;
+            this.D14out.Font = new System.Drawing.Font("Bookman Old Style", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.D14out.Location = new System.Drawing.Point(407, 199);
+            this.D14out.Name = "D14out";
+            this.D14out.Size = new System.Drawing.Size(75, 23);
+            this.D14out.TabIndex = 266;
+            this.D14out.Text = "HIGH";
+            this.D14out.UseVisualStyleBackColor = true;
+            this.D14out.Click += new System.EventHandler(this.D14out_Click);
             // 
             // FIRMATA
             // 
@@ -673,7 +673,6 @@
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Button D14in;
-        private System.Windows.Forms.Button D14out;
         private System.Windows.Forms.Button D15in;
         private System.Windows.Forms.Button D15out;
         private System.Windows.Forms.Button D16in;
@@ -707,6 +706,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label lbconfirmacion;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button D14out;
     }
 }
 
